@@ -10,7 +10,7 @@ export default function Editable ({ value, onChange, children, ...props }) {
     if (!editing) {
       setState(value);
     }
-  });
+  },[value,editing]);
 
   function onKeyPress (event) {
     if (event.key === 'Enter') {

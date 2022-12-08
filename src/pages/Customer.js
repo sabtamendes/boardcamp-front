@@ -21,7 +21,7 @@ export default function Customer () {
   useEffect(() => {
     fetchCustomer();
     fetchRentals();
-  }, [id]);
+  },);
 
   function fetchCustomer () {
     api.getById(id).then(customer => {
